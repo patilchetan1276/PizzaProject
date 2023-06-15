@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block start %}
+
+<div class="container mb-5">
+    <div>
+        <h3>Pizza's Customer Care Number</h3>
+        <p>+91 8147409230</p>
+    </div>
+    <div>
+        <h3>Pizza's email-id</h3>
+        <p><a href="https://mail.google.com/mail/?tab=rm&ogbl" style="text-decoration: none; color:black">patilchetan1276@gmail.com</a></p>
+    </div>
+    <div>
+        <h3>Pizza's Contact Adress</h3>
+        <p>Pizza's Pizza India,
+            Beside Patil Hospital, Gazipur, Kalaburagi - 585101.</p>
+    </div>
+
+</div>
+<div class="accordion  shadow-lg" id="accordionExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                How do I talk to Pizza's Customer care?
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                You can dial their number <strong>8147409230</strong>. You can email them via their official email id
+                (patilchetan1276@gmail.com).You can
+                 visit the website to find particular product or related thing.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Is Pizza's Contact number is toll-free?
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>No.</strong> Its not a toll-free number
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

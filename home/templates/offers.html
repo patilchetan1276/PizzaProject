@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block start %}
+<div class="container   my-4">
+
+    <div class="row">
+        {% for offer in offers %}
+        <div class="col-lg-4 col-md-6 mb-4 my-3">
+            <div class="card">
+
+                <div class="card-body card shadow-lg">
+                    <h5 class="card-title" >
+                        {{offer.offer_title}}
+
+                    </h5>
+
+                    <p class="card-text">{{offer.offer_description}}</p>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="popover"
+                        data-bs-title="Terms & Conditions"
+                        data-bs-content="{{offer.offer_tc}}">T&C
+                        </button>
+                </div>
+            </div>
+        </div>
+
+{% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}

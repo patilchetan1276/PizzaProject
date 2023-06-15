@@ -1,0 +1,35 @@
+
+{% extends 'base.html'%}
+{% block start %}
+
+<div class="text-center ">
+    <h1>SignUp</h1>
+</div>
+<div class=" container card shadow-lg rounded-3 mb-5" style="background-color: rgb(248, 226, 194);">
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} m-3" role="alert">
+        {{ message }}
+      </div>
+      {% endfor %}
+      {% endif %}
+<form method="post" class="p-5">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" name="password" id="exampleInputPassword1">
+    </div>
+ 
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="container mt-4">
+        <p class="text-center">Already a user <a href="/login">Login</a></p>
+      </div>
+  </form>
+</div>
+
+{% endblock%}
